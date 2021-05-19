@@ -2,6 +2,10 @@
 #define FRAKTALE_H
 
 #include <QPainter>
-void rysujFraktal(QPainter *painter);
+class Fraktale {
+public:
+    static void rysujFraktal(QPainter *painter);
+};
+
 
 #endif // FRAKTALE_H

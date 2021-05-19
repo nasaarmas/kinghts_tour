@@ -3,22 +3,16 @@
 #include "fraktale.h"
 #include <QRect>
 
-MainWindow::MainWindow(QWidget *parent)
-    : QMainWindow(parent)
-    , ui(new Ui::MainWindow)
-{
+MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWindow) {
     ui->setupUi(this);
 }
-void MainWindow::paintEvent(QPaintEvent*)
-{
+void MainWindow::paintEvent(QPaintEvent*) {
     QPainter painter(this);
     //QRect kwadrat(10, 10, 400, 700);
     //painter.setWindow(kwadrat);
-
-    rysujFraktal(&painter);
+    Fraktale::rysujFraktal(&painter);
 }
-MainWindow::~MainWindow()
-{
+MainWindow::~MainWindow() {
     delete ui;
 }
 
